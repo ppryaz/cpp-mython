@@ -76,7 +76,6 @@ namespace parse {
     }
 
     Lexer::Lexer(std::istream& in) {
-        // Реализуйте конструктор самостоятельно
         using namespace parse;
         using namespace token_type;
 
@@ -98,7 +97,6 @@ namespace parse {
     }
 
     const Token& Lexer::CurrentToken() const {
-        // Заглушка. Реализуйте метод самостоятельно
         if (head_ < line_.size()) {
             return line_[head_];
         }
@@ -106,13 +104,12 @@ namespace parse {
     }
 
     Token Lexer::NextToken() {
-        // Заглушка. Реализуйте метод самостоятельно
         if ((head_ + 1) < line_.size()) {
             head_++;
         }
         return CurrentToken();
 
-        //throw std::logic_error("Not implemented"s);
+        
     }
     size_t Lexer::CheckAndCutLine(std::string& in) const {
         size_t result = in.find_first_not_of(' ', 0);

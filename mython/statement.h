@@ -5,7 +5,7 @@
 #include <functional>
 
 namespace ast {
-
+    // выражение
 	using Statement = runtime::Executable;
 
 	// Выражение, возвращающее значение типа T,
@@ -311,7 +311,7 @@ namespace ast {
 		std::unique_ptr<Statement> condition_, if_body_, else_body_;
 	};
 
-	// Операция сравнения
+	//Операция сравнения
 	class Comparison : public BinaryOperation {
 	public:
 		// Comparator задаёт функцию, выполняющую сравнение значений аргументов
